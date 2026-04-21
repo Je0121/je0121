@@ -1,0 +1,11 @@
+    <script>
+        function getUrlParam(e) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(e);
+}
+const domain = getUrlParam('domain')
+const secret = getUrlParam('secret')
+const port = getUrlParam('port')
+const tgproxy = "tg://proxy?server=" + domain + "&port=" + port + "&secret=" + secret
+window.location.href = tgproxy
+</script>
